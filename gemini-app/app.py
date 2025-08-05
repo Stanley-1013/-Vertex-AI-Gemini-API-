@@ -18,9 +18,9 @@ vertexai.init(project=PROJECT_ID, location=LOCATION)
 
 @st.cache_resource
 def load_models():
-    text_model_pro = GenerativeModel("gemini-2.0-flash")
-    multimodal_model_pro = GenerativeModel("gemini-2.0-flash")
-    return text_model_pro, multimodal_model_pro
+    text_model = GenerativeModel("gemini-2.0-flash")
+    multimodal_model = GenerativeModel("gemini-2.0-flash")
+    return text_model, multimodal_model
 
 st.header("Vertex AI Gemini API", divider="rainbow")
 text_model_pro, multimodal_model_pro = load_models()
